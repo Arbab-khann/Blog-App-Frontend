@@ -1,0 +1,225 @@
+/*---------------- for top------------- */
+.header {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  /* border: 1px solid red; */
+  height: 87px;
+  align-items: last baseline;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.header:hover {
+  cursor: pointer;
+}
+.the {
+  width: fit-content;
+  height: fit-content;
+  transform: matrix(0, -1, 1, 0, 0, 0);
+  font-size: 21px;
+  color: #000000;
+  padding-top: 14px;
+  margin-right: 10px;
+}
+.siren {
+  color: red;
+  display: flex;
+  align-items: center;
+  width: 190px;
+  height: 60px;
+  font: normal normal bold 71px Montserrat;
+}
+/* -------------------for Login btn------------------------ */
+.login-btn {
+  border: 1px solid rgb(191, 0, 0);
+  background-color: red;
+  color: white;
+  width: 6rem;
+  height: 2rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+/*---------------- for Nav------------- */
+.nav,
+.openNav {
+  width: 90%;
+  font-size: 22px;
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  margin: auto;
+  padding-bottom: 10px;
+  box-shadow: 0px 0.3px 0.5px 0px grey;
+  align-items: center;
+}
+
+/* -------------for hamburger---------------- */
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 880px) {
+  .nav {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  /* ------------for top------------- */
+  .header {
+    height: fit-content;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+  }
+  .siren {
+    font: normal normal bold 35px/29px Montserrat;
+  }
+  .the {
+    width: fit-content;
+    height: fit-content;
+    transform: matrix(0, -1, 1, 0, 0, 0);
+    font-size: 11px;
+    color: #000000;
+    padding-top: 14px;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+  }
+
+  /*---------------- for NavBar------------- */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+  }
+  /*---------------- for Nav------------- */
+
+  /* .navForDekestopView {
+      display: none;
+    } */
+  .nav {
+    display: none !important;
+  }
+  .openNav {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    background: white;
+    top: 80px;
+    right: 0px;
+    z-index: 2;
+    line-height: 25px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    box-shadow: 0px -0.3px 0.5px 0px grey;
+  }
+  .openNav > .nonActiveNav:nth-child(n) {
+    width: 100vw;
+    text-align: center;
+    border-bottom: 1px solid rgb(162, 161, 161);
+  }
+
+  /* -------------------for hamburger------------------------ */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 28px;
+    background: white;
+  }
+  .hamburger:hover {
+    cursor: pointer;
+  }
+  .closeHamburger:nth-child(1) {
+    height: 16.6%;
+    background: #a3a1a1;
+    animation: Open1 1s ease-out 0s forwards;
+  }
+  @keyframes Open1 {
+    0% {
+      width: 28px;
+      transform: rotate(-60deg);
+      transform-origin: right center;
+    }
+    100% {
+      width: 40px;
+      transform: rotate(0deg);
+      transform-origin: right center;
+      color: rgb(21, 0, 255);
+    }
+  }
+  .closeHamburger:nth-child(2) {
+    height: 16.6%;
+    background: #a3a1a1;
+    animation: Open2 1s ease-out 0s forwards;
+    animation-duration: 1s;
+  }
+  @keyframes Open2 {
+    0% {
+      width: 0px;
+      visibility: hidden;
+      transform-origin: right center;
+    }
+    100% {
+      visibility: visible;
+      width: 40px;
+      display: flex;
+    }
+  }
+  .closeHamburger:nth-child(3) {
+    height: 16.6%;
+    background: #a3a1a1;
+    animation: Open3 1s ease-out 0s forwards;
+  }
+  @keyframes Open3 {
+    0% {
+      width: 28px;
+      transform: rotate(60deg);
+      transform-origin: right center;
+    }
+    100% {
+      width: 40px;
+      transform: rotate(0deg);
+      transform-origin: right center;
+    }
+  }
+
+  .openHamburger:nth-child(2) {
+    display: none;
+  }
+  .openHamburger:nth-child(1) {
+    width: 28px;
+    height: 16.6%;
+    animation: Cross1 1s ease-out 0s forwards;
+    background: #a3a1a1;
+  }
+
+  @keyframes Cross1 {
+    100% {
+      transform: rotate(-60deg);
+      transform-origin: right center;
+    }
+  }
+  .openHamburger:nth-child(3) {
+    width: 28px;
+    height: 16.6%;
+    animation: cross2 0.5s ease-out 0s 1 forwards;
+    background: #a3a1a1;
+  }
+
+  @keyframes cross2 {
+    100% {
+      transform: rotate(60deg);
+      transform-origin: right center;
+    }
+  }
+}
