@@ -5,7 +5,7 @@ export const Store = createContext();
 function Storedata(props) {
   const [data, setdata] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:5050/data").then((res) => {
+    axios.get("https://blog-backend-ldhh.onrender.com/data").then((res) => {
       setdata(res.data);
 
       console.log(res.data);
