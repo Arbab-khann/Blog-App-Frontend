@@ -65,7 +65,7 @@ function Register() {
 
       try {
         const response = await axios.post(
-          "http://localhost:5050/user/register",
+          "https://blog-backend-ldhh.onrender.com/user/register",
           { name, email, password }
         );
         setTimeout(() => {
