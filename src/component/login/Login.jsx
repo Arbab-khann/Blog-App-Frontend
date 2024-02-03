@@ -19,10 +19,13 @@ function Login() {
       // notify();
 
       try {
-        const response = await axios.post("http://localhost:5050/user/login", {
-          email,
-          password,
-        });
+        const response = await axios.post(
+          "https://blog-backend-ldhh.onrender.com/user/login",
+          {
+            email,
+            password,
+          }
+        );
         if (response.data.msg === "user login successfull") {
           toast.success("login successful", {
             position: "top-center",
