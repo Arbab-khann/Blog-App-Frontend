@@ -7,8 +7,7 @@ function Storedata(props) {
   useEffect(() => {
     axios.get("https://blog-backend-ldhh.onrender.com/data").then((res) => {
       setdata(res.data);
-
-      console.log(res.data);
+      // console.log(res.data);
     });
   }, []);
 

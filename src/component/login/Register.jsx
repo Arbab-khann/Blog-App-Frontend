@@ -73,7 +73,14 @@ function Register() {
         }, 2000);
 
         const data = response.data;
-        localStorage.setItem("token", data.token);
+        console.log("line76 register compo", data);
+        localStorage.setItem("token", data.jwttoken);
+        console.log("line77 register compo", data.jwttoken);
+        // setTimeout(() => {
+        //   // Clear localStorage
+        //   localStorage.removeItem("token");
+        //   console.log("localStorage cleared after 10 seconds");
+        // }, 60000);
       } catch (err) {
         console.log(err);
       }

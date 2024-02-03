@@ -40,7 +40,13 @@ function Login() {
           }, 2000);
 
           const data = response.data;
-          localStorage.setItem("token", data.token);
+          localStorage.setItem("token", data.jwttoken);
+          console.log("line44 login compo", data.jwttoken);
+          // setTimeout(() => {
+          //   // Clear localStorage
+          //   localStorage.removeItem("token");
+          //   console.log("localStorage cleared after 10 seconds");
+          // }, 60000);
         } else if (response.data.msg === "enter correct password") {
           toast.error("pass incorrect", {
             position: "top-center",
